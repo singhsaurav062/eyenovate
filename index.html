@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ipcam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ip-container">
+        <label for="changeIP1">Change IP1:</label>
+        <input type="text" class="ip1c" id="changeIP1" placeholder="Enter IP1" value="192.168.20.141">
+
+        <label for="changeIP2">Change IP2:</label>
+        <input type="text" class="ip2c" id="changeIP2" placeholder="Enter IP2" value="192.168.20.141">
+    </div>
+
+    <div class="button-container">
+        <button id="startBtn">Start Recording</button>
+        <button id="stopBtn" disabled>Stop Recording</button>
+        <button onclick="changeIP()">Change IP</button>
+    </div>
+
+    <div>
+        <div class="video-container">
+            <img id="browser_video1" class="video-image" src="http://192.168.20.141:8080/video">
+            <img id="browser_video2" class="video-image-ios" src="http://192.168.20.141:80/video.mjpg">
+        </div>
+
+        <div class="video-container">
+            <img id="browser_video3" class="video-image" src="http://192.168.20.141:8080/video">
+            <img id="browser_video4" class="video-image-ios" src="http://192.168.20.141:80/video.mjpg">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
